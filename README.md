@@ -4,7 +4,7 @@ find out which cards you will be given, and you can choose to take another
 card or give up.
 
 To be added:
-[X] Randomization of cards
-[ ] Double down scenario/split
-[ ] AI to play against
-[ ] Convert to PyGame?
+- [x] Randomization of cards
+- [ ] Double down scenario/split
+- [ ] AI to play against
+- [ ] Convert to PyGame?
