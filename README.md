@@ -6,5 +6,5 @@ card or give up. This game is played in the terminal and can be played [here](ht
 To be added:
 - [x] Randomization of cards
 - [ ] Double down scenario/split
-- [ ] AI to play against
+- [X] AI to play against
 - [ ] Convert to PyGame?
