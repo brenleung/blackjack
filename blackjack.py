@@ -8,13 +8,13 @@ suit = ["spades", "clubs", "hearts", "diamonds"]
 num = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"]
 cards = []
 
-def giveCard():
+def giveCard():  # generates card for player
     cardColor = color[random.randint(0,1)]
     cardSuit = suit[random.randint(0,3)]
     cardNum = num[random.randint(0,12)]
     cards.append(convertCard(cardColor, cardSuit, cardNum))
 
-def convertCard(color, suit, num):
+def convertCard(color, suit, num):  # converts card attributes to string
     card = ""
     if color == "black":
         card += "B"
@@ -37,7 +37,7 @@ def convertCard(color, suit, num):
             giveCard()
     return card
 
-def findValue(cards):
+def findValue(cards):  # finds total value of hand
     total = 0
     aces = 0
     for i in cards:
@@ -53,25 +53,25 @@ def findValue(cards):
         aces -= 1
     return total
 
-def checkWin(cards):
+def checkWin(cards):  # win condition
     if findValue(cards) == 21:
         displayCards(cards)
         print("Congrats! Blackjack! You win!")
         return True
     return False
 
-def checkLoss(cards):
+def checkLoss(cards):  # lose condition
     if findValue(cards) > 21:
         displayCards(cards)
         print("Bust!")
         return True
     return False
 
-def displayCards(cards):
+def displayCards(cards):  # prints cards
     print("Your cards are: ")
     for i in cards:
         print(str(i) + " ")
-    print("for a total value of: " + str(findValue(cards)))
+    print("for a total value of " + str(findValue(cards)))
  
 tut = input("Would you like a tutorial? Y/N ")
 if (tut == "Y"):
