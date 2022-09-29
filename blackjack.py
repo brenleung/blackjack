@@ -96,7 +96,8 @@ while (findValue(AIhand) < 17):  # AI play conditions
 
 while (not checkLoss(player) and not checkWin(player)):  # check for bust/blackjack
     displayCards(player)
-    if input("Stand or hit? S/H ") == "H":  # hit
+    sh = input("Stand or hit? S/H ")
+    if sh == "H" or sh == "h":  # hit
         giveCard(player)
     else:  # stand
         print("Thanks for playing! Your final card value was: " + str(findValue(player)) + "\n")
